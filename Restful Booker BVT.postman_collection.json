@@ -25,10 +25,7 @@
 									"    // See Chaijs docs for complete list of available assertions",
 									"    // https://www.chaijs.com/api/bdd",
 									"    pm.expect(jsonData).to.not.have.lengthOf(0);",
-									"});",
-									"",
-									"pm.execution.setNextRequest(\"helloworld\");",
-									""
+									"});"
 								],
 								"type": "text/javascript",
 								"packages": {},
