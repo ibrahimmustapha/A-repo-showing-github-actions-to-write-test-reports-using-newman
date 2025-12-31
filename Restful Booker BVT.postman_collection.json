@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "2cc19f53-b048-43bd-9e25-687c58969124",
+		"_postman_id": "80b7081b-7902-4069-8646-adc20aaab06a",
 		"name": "Restful Booker BVT",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "18880478",
-		"_collection_link": "https://helloworld-team.postman.co/workspace/Helloworld-Team-Workspace~c03bbad5-5946-4a30-83eb-cded9c266d66/collection/18880478-2cc19f53-b048-43bd-9e25-687c58969124?action=share&source=collection_link&creator=18880478"
+		"_collection_link": "https://helloworld-team.postman.co/workspace/Helloworld-Team-Workspace~c03bbad5-5946-4a30-83eb-cded9c266d66/collection/18880478-80b7081b-7902-4069-8646-adc20aaab06a?action=share&source=collection_link&creator=18880478"
 	},
 	"item": [
 		{
@@ -25,11 +25,10 @@
 									"    // See Chaijs docs for complete list of available assertions",
 									"    // https://www.chaijs.com/api/bdd",
 									"    pm.expect(jsonData).to.not.have.lengthOf(0);",
-									"});"
+									"});",
+									""
 								],
-								"type": "text/javascript",
-								"packages": {},
-								"requests": {}
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -173,7 +172,9 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
 							}
 						},
 						{
@@ -194,9 +195,12 @@
 									"pm.test(\"Expected booking id is in the returned array\", function () {",
 									"    pm.expect(booking_ids).to.include(pm.variables.get(\"booking_id\"));",
 									"});",
-									""
+									"",
+									"pm.execution.setNextRequest(\"Something here\")"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
 							}
 						}
 					],
@@ -500,9 +504,13 @@
 								"exec": [
 									"pm.test(\"Status code is 404\", function () {",
 									"    pm.response.to.have.status(\"Not Found\")",
-									"});"
+									"});",
+									"",
+									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
 							}
 						}
 					],
@@ -649,7 +657,9 @@
 									"pm.variables.set(\"firstname\", uuid());",
 									"pm.variables.set(\"lastname\", uuid());"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
 							}
 						},
 						{
@@ -682,7 +692,9 @@
 									"    pm.expect(booking.additionalneeds, \"unexpected additionalneeds\").to.eql(pm.variables.get(\"additionalneeds\"));",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
 							}
 						}
 					],
@@ -1130,12 +1142,9 @@
 						"exec": [
 							"pm.test(\"Ping is successful\", function () {",
 							"    pm.response.to.be.success;",
-							"});",
-							""
+							"});"
 						],
-						"type": "text/javascript",
-						"packages": {},
-						"requests": {}
+						"type": "text/javascript"
 					}
 				}
 			],
